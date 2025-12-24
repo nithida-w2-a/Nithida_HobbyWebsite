@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobby: Jigsaw Puzzles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<header>
+    <h1>My Hobby: Solving Jigsaw Puzzles</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="hobby1.html">Singing</a>
+    <a href="hobby2.html">Jigsaw Puzzles</a>
+    <a href="hobby3.html">Origami</a>
+</nav>
+
+<section>
+    <h2>What Are Jigsaw Puzzles?</h2>
+    <p>Jigsaw puzzles are pictures cut into many pieces that you assemble. They improve memory, concentration, and patience.</p>
+</section>
+
+<section>
+    <h2>My Experience</h2>
+    <p>I began solving puzzles during my free time and now enjoy challenging ones. I love the feeling of finishing a big puzzle!</p>
+
+    <h3 class="my-progress">My Progress</h3>
+    <table>
+        <tr><th>Year</th><th>Achievement</th></tr>
+        <tr><td>2016</td><td>Completed my first puzzle</td></tr>
+        <tr><td>2020</td><td>Completed 300-piece puzzle</td></tr>
+        <tr><td>2025</td><td>Completed 500-piece puzzle</td></tr>
+    </table>
+</section>
+
+<section>
+    <h2>Picture Gallery</h2>
+    <img src="images/hobby2.jpg" alt="Jigsaw Puzzle">
+    <p style="font-style:italic;">My latest completed puzzle(500-piece) as I do not have the pictures of the earlier ones.</p>
+</section>
+
+<section>
+    <h2>Tools I Use</h2>
+    <table>
+        <tr><th>Item</th><th>Purpose</th></tr>
+        <tr><td>Sorting tray</td><td>Organizing pieces</td></tr>
+        <tr><td>Puzzle board</td><td>Working space</td></tr>
+        <tr><td>Puzzle glue</td><td>Preserving finished puzzles (I currently do not have this but may buy one soon)</td></tr>
+    </table>
+</section>
+
+<section>
+    <h2>Fun Fact</h2>
+    <div class="fun-fact">
+        <strong>Did you know?</strong>
+        <p>Puzzles help improve problem-solving skills and short-term memory!</p>
+    </div>
+        <h2>Fun Fact 2 (Personal Experience)</h2>
+    <div class="fun-fact">
+        <strong>Not important at all</strong>
+        <p>I use a broken food tray for my Puzzle Board, and a picture frame(which isn't even the correct size) to keep my puzzles intact since I currently do not have Puzzle Glue.</p>
+    </div>
+</section>
+
+<footer>
+    <a href="index.html" class="back-home">Back To Home Page</a>
+</footer>
+
+</div>
+<!-- Theme Toggle Button -->
+<div class="theme-btn" onclick="toggleTheme()">🌙/☀️</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+    }
+
+    // Theme toggle function
+    window.toggleTheme = function () {
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    };
+
+});
+</script>
+
+</body>
+</html>

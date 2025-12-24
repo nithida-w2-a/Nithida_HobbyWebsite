@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobby Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Welcome to My Hobby Website</h1>
+        <p>Hello! My name is <strong>Nithida Wattanachai</strong>. These are my hobbies:</p>
+    </header>
+
+    <nav>
+        <a href="hobby1.html">Singing</a>
+        <a href="hobby2.html">Jigsaw Puzzles</a>
+        <a href="hobby3.html">Origami</a>
+    </nav>
+
+    <section>
+        <h2>About Me</h2>
+<p>
+    I'm someone who enjoys creative and calming activities in my free time.
+    Singing allows me to express my emotions and helps build my confidence.
+    Solving jigsaw puzzles helps me relax while challenging my focus and patience.
+    Origami is another hobby I enjoy because it allows me to create beautiful things from simple materials.
+    These hobbies bring joy, balance, and peacefulness into my life.
+</p>
+
+        <h2 style="margin-top: 40px;">My Hobbies</h2>
+       <div class="hobbies-list">
+
+    <a href="hobby1.html" class="hobby-card">
+        <div class="hobby-icon">🎤</div>
+        <h3>Singing</h3>
+        <p>A fun and expressive musical hobby.</p>
+    </a>
+
+    <a href="hobby2.html" class="hobby-card">
+        <div class="hobby-icon">🧩</div>
+        <h3>Jigsaw Puzzles</h3>
+        <p>A relaxing way to challenge the mind.</p>
+    </a>
+
+<a href="hobby3.html" class="hobby-card">
+    <div class="hobby-icon">🗞️</div>
+    <h3>Origami</h3>
+    <p>Creative art of folding paper.</p>
+</a>
+
+
+</div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Nithida Wattanachai | Created with HTML & CSS</p>
+    </footer>
+</div>
+<!-- Floating Contact Button -->
+<div class="contact-btn" onclick="toggleForm()">💬</div>
+
+<!-- Popup Feedback Form -->
+<div class="contact-form" id="contactForm">
+    <h3>Send Feedback</h3>
+    
+    <label>Your Name</label>
+    <input type="text" placeholder="Enter your name">
+
+    <label>Your Message</label>
+    <textarea placeholder="Write your message..."></textarea>
+
+    <button class="send-btn">Send</button>
+</div>
+<!-- Theme Toggle Button -->
+<div class="theme-btn" onclick="toggleTheme()">🌙/☀️</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+    }
+
+    // Theme toggle function
+    window.toggleTheme = function () {
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    };
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,442 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL BODY */
+body {
+    font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #e8eeff 0%, #d7e1ff 100%);
+    min-height: 100vh;
+    padding: 25px;
+    color: #2f3547;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(120deg, #b7c8ef, #909acb);
+    color: white;
+    padding: 55px 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.7em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 12px;
+    font-size: 1.2em;
+    opacity: 0.95;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding: 20px;
+    background: #f4f6ff;
+    border-bottom: 3px solid #b7c8ef;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background: #b7c8ef;
+    padding: 10px 26px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #909acb;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* SECTION */
+section {
+    padding: 40px 30px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+h2 {
+    color: #8ba2d9;
+    font-size: 1.9em;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+p {
+    line-height: 1.7;
+    font-size: 1.12em;
+    color: #333;
+    opacity: 0.9;
+}
+
+/* HOMEPAGE HOBBY CARDS */
+.hobbies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.hobby-card {
+    background: rgba(243, 246, 255, 0.7);
+    border: 2px solid #d8e2ff;
+    padding: 28px;
+    border-radius: 18px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.35s ease;
+    color: #4f5c80 !important;
+    backdrop-filter: blur(6px);
+}
+
+.hobby-card:hover {
+    transform: translateY(-8px);
+    border-color: #b7c8ef;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+.hobby-icon {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 250px;
+    height: 400px;
+    object-fit: cover;  /* keeps images from stretching, crops neatly */
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.2);
+}
+
+/* TABLES */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 2px solid #b5cae9;
+    padding: 15px;
+}
+
+th {
+    background: linear-gradient(135deg, #c8d7f6, #929acb);
+    color: white;
+}
+.tutorial-box {
+    padding: 15px;
+    background: #f3f5ff;
+    border: 2px solid #d3dcff;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    max-width: 100%;       /* ensures it stretches nicely */
+    margin: 0 auto 20px;   /* centers it and adds spacing below */
+}
+
+.tutorial-box a {
+    text-decoration: none;
+    color: #6f7bb2;
+    font-weight: bold;
+}
+
+/* FUN FACT BOX */
+.fun-fact {
+    background: #e7edff;
+    padding: 20px;
+    border-left: 6px solid #b5c9ec;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+footer {
+    max-width: 100%; /* instead of 1000px */
+    padding: 22px;
+    background: #4f5c80;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 12px;
+}
+
+
+
+.back-home {
+    display: inline-block;      /* ensures consistent clickable area */
+    padding: 12px 25px;         /* same padding as other pages */
+    background: #8ba2d9;        /* give it a background like nav buttons */
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.back-home:hover {
+    background: #738ac7;
+    color: #dfe7ff;
+    transform: translateY(-2px);
+}
+
+/* Floating Contact Button */
+.contact-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #909acb;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.contact-btn:hover {
+    background: #b6c4f0;
+    transform: translateY(-3px);
+}
+
+/* Popup Form */
+.contact-form {
+    position: fixed;
+    bottom: 95px; /* above button */
+    right: 25px;
+    width: 280px;
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.2);
+    border: 2px solid #d8e3ff;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(15px);
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+.contact-form.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Form Styling */
+.contact-form h3 {
+    font-size: 1.2em;
+    color: #6f7bb2;
+    margin-bottom: 10px;
+}
+
+.contact-form label {
+    font-size: 0.85em;
+    color: #5a668e;
+    margin-top: 10px;
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 2px solid #cfd8fa;
+    outline: none;
+    font-size: 0.95em;
+    resize: none;
+    transition: 0.2s;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #8ba2d9;
+}
+
+/* Send Button */
+.send-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #8ba2d9;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.send-btn:hover {
+    background: #738ac7;
+}
+/* Theme Toggle Button */
+.theme-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 95px;
+    background: #6f7bb2;
+    color: white;
+    width: 100px;          /* wider */
+    height: 55px;
+    border-radius: 30px; /* rounded pill */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+.theme-btn {
+    padding: 0 8px;
+}
+
+.theme-btn:hover {
+    background: #4f5c80;
+    transform: translateY(-3px);
+}
+/* Dark Mode */
+body.dark {
+    background: linear-gradient(135deg, #1f2433, #2a2f45);
+    color: #e4e6f0;
+}
+
+body.dark .container {
+    background: rgba(40, 45, 70, 0.9);
+}
+
+body.dark header {
+    background: linear-gradient(120deg, #3a4170, #2f355c);
+}
+
+body.dark nav {
+    background: #2a2f45;
+}
+
+body.dark nav a {
+    background: #4f5c80;
+}
+
+body.dark nav a:hover {
+    background: #6f7bb2;
+}
+
+body.dark section {
+    border-color: #3a3f5c;
+}
+
+body.dark p,
+body.dark h2,
+body.dark h3 {
+    color: #e4e6f0;
+}
+
+body.dark .hobby-card {
+    background: rgba(60, 65, 95, 0.8);
+    border-color: #5f6aa0;
+}
+
+body.dark footer {
+    background: #2f355c;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+/* Dark Mode – Fun Fact Section */
+body.dark .fun-fact {
+    background: #2f355c;
+    border-left-color: #6f7bb2;
+    color: #e4e6f0;
+}
+
+body.dark .fun-fact strong {
+    color: #c9d4ff;
+}
+
+/* Dark Mode – Origami Tutorial Box */
+body.dark .tutorial-box {
+    background: #2a2f45;
+    border-color: #5f6aa0;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+body.dark .tutorial-box p {
+    color: #e4e6f0;
+}
+
+body.dark .tutorial-box a {
+    color: #c9d4ff;
+}
+
+body.dark .tutorial-box a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
