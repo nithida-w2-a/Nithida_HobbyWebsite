@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobby: Origami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>My Hobby: Origami</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="hobby1.html">Singing</a>
+        <a href="hobby2.html">Jigsaw Puzzles</a>
+        <a href="hobby3.html">Origami</a>
+    </nav>
+
+    <!-- SECTION 1 -->
+    <section>
+        <h2>What is Origami?</h2>
+        <p>
+            Origami is the art of paper folding. It originated in Japan and has become a creative hobby enjoyed worldwide.
+            With just a single sheet of paper, you can make animals, flowers, decorations, and even complex geometric shapes.
+        </p>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section>
+        <h2>My Experience</h2>
+        <p>
+            I started doing origami because I enjoy relaxing and hands-on activities. Folding paper helps me stay calm, 
+            focused, and creative. I love the moment when a simple sheet of paper transforms into something beautiful.
+        </p>
+
+        <h3 class="my-progress">My Progress</h3>
+        <table>
+            <tr><th>Year</th><th>Achievement</th></tr>
+            <tr><td>2017</td><td>Learned basic folds (crane, heart, butterfly)</td></tr>
+            <tr><td>2018</td><td>Made a more complex model like a dragon</td></tr>
+            <tr><td>2025</td><td>Came back to Origami after not doing it for many years</td></tr>
+        </table>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section>
+        <h2>Picture Gallery</h2>
+        <img src="images/hobby3.jpg" alt="Origami">
+        <p style="font-style:italic;">Origami piece I like to fold the most.</p>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section>
+        <h2>Origami Tutorial</h2>
+        <h3>(It cannot be embedded because of copyright reasons)</h3>
+        <div class="tutorial-box">
+            <p style="font-weight: 600; margin-bottom: 10px;">Watch Origami Tutorial</p>
+            <a href="https://www.pinterest.com/pin/684758318365452481/" 
+               target="_blank">
+                👉 Click here to open the tutorial video
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section>
+        <h2>Tools I Use</h2>
+        <table>
+            <tr><th>Item</th><th>Purpose</th></tr>
+            <tr><td>Origami Paper</td><td>Colorful, square sheets for folding</td></tr>
+            <tr><td>Mobile Phone</td><td>Used for watching Tutorial Videos</td></tr>
+        </table>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section>
+        <h2>Fun Fact</h2>
+        <div class="fun-fact">
+            <strong>Did you know?</strong>
+            <p>
+                The traditional Japanese crane is one of the most famous origami models, and folding 1,000 of them is believed
+                to bring good luck and health!
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="index.html" class="back-home">Back To Home Page</a>
+    </footer>
+
+</div>
+<!-- Theme Toggle Button -->
+<div class="theme-btn" onclick="toggleTheme()">🌙/☀️</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+    }
+
+    // Theme toggle function
+    window.toggleTheme = function () {
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    };
+
+});
+</script>
+
+</body>
+</html>

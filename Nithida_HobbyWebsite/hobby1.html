@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobby: Singing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<header>
+    <h1>My Hobby: Singing</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="hobby1.html">Singing</a>
+    <a href="hobby2.html">Jigsaw Puzzles</a>
+    <a href="hobby3.html">Origami</a>
+</nav>
+
+<section>
+    <h2>What is Singing?</h2>
+    <p>Singing is creating musical sound with your voice. It allows people to express emotions, reduce stress, and connect with music.</p>
+</section>
+
+<section>
+    <h2>My Experience</h2>
+    <p>I’ve been singing for 3-4 years and enjoy practicing different genres. It makes me feel confident and expressive, especially when I'm in the shower.</p>
+
+    <h3 class="my-progress">My Progress</h3>
+    <table>
+        <tr><th>Year</th><th>Achievement</th></tr>
+        <tr><td>2023</td><td>Started singing</td></tr>
+        <tr><td>2024</td><td>Sang many genres of songs</td></tr>
+        <tr><td>2025</td><td>Improved vocal range</td></tr>
+    </table>
+</section>
+
+<section>
+    <h2>Picture Gallery</h2>
+    <img src="images/hobby1.jpeg" alt="Singing">
+    <p style="font-style:italic;">I currently don't have any pictures in this category.</p>
+</section>
+
+<section>
+    <h2>Equipment I Use</h2>
+    <table>
+        <tr><th>Item</th><th>Purpose</th></tr>
+        <tr><td>Mobile Phone</td><td>Recording and practice from many applications</td></tr>
+        <tr><td>Headphones</td><td>Listening to music</td></tr>
+    </table>
+</section>
+
+<section>
+    <h2>Fun Fact</h2>
+    <div class="fun-fact">
+        <strong>Did you know?</strong>
+        <p>Warm water helps relax your vocal cords before singing!</p>
+    </div>
+    <h2>Fun Fact 2 (Personal Experience)</h2>
+    <div class="fun-fact">
+        <strong>Not important at all</strong>
+        <p>I have never drank warm water before singing since I hate drinking warm water, so I don't really know how my real voice sounds like.</p>
+    </div>
+</section>
+
+<footer>
+    <a href="index.html" class="back-home">Back To Home Page</a>
+</footer>
+
+</div>
+<!-- Theme Toggle Button -->
+<div class="theme-btn" onclick="toggleTheme()">🌙/☀️</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+    }
+
+    // Theme toggle function
+    window.toggleTheme = function () {
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    };
+
+});
+</script>
+
+</body>
+</html>
